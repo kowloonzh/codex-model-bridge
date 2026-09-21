@@ -1,0 +1,17 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "codex-model-bridge"
+version = "0.5.1"
+description = "Dynamic Codex model catalog and isolated upstream routing"
+license-files = ["THIRD_PARTY_NOTICES.md"]
+requires-python = ">=3.11"
+dependencies = ["aiohttp==3.13.5", "zstandard==0.25.0"]
+
+[project.scripts]
+codex-model-bridge = "codex_model_bridge.__main__:main"
+
+[tool.setuptools.packages.find]
+include = ["codex_model_bridge*"]
